@@ -9,14 +9,17 @@ const path = require("path");
 const { config } = require("./src/database/firebase");
 
 // Crear app de Express
-const app = express();
+const cors = require("cors");
+
 app.use(cors({
-  origin: [
-    "https://notas-universitarias-byjuanguzman.netlify.app"
-  ],
-  methods: ["GET", "POST"],
+  origin: "*",
+  methods: ["GET", "POST", "OPTIONS"],
   allowedHeaders: ["Content-Type", "SOAPAction"],
 }));
+
+// Responder preflight (muy importante)
+app.options("*", cors());
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
