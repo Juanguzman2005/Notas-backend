@@ -12,7 +12,7 @@ const { config } = require("./src/database/firebase");
 const cors = require("cors");
 
 app.use(cors({
-  origin: "*",
+  origin: "https://notas-universitarias-byjuanguzman.netlify.app",
   methods: ["GET", "POST", "OPTIONS"],
   allowedHeaders: ["Content-Type", "SOAPAction"],
 }));
