@@ -29,11 +29,11 @@ const wsdlXml = fs.readFileSync(wsdlPath, "utf8");
 // Crear servidor HTTP y conectar SOAP
 const server = http.createServer(app);
 
-const PORT = config.server.port || 3000;
+const PORT = process.env.PORT || 3000;
+
 
 server.listen(PORT, () => {
-  // Endpoint SOAP
   soap.listen(server, "/soap", soapService, wsdlXml);
-  console.log(`✅ Servidor HTTP escuchando en http://localhost:${PORT}`);
-  console.log(`✅ WSDL disponible en      http://localhost:${PORT}/soap?wsdl`);
+  console.log(`Servidor escuchando en puerto ${PORT}`);
 });
+
