@@ -3,13 +3,13 @@ const bodyParser = require("body-parser");
 const soap = require("soap");
 const fs = require("fs");
 const http = require("http");
-const cors = require("cors");
 const path = require("path");
+const cors = require("cors");
 
 const { config } = require("./src/database/firebase");
 
 // Crear app de Express
-const cors = require("cors");
+const app = express();
 
 app.use(cors({
   origin: "*",
