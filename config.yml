@@ -1,0 +1,16 @@
+server:
+  port: 3000
+
+jwt:
+  secret: "CLAVE_SUPER_SECRETA_CAMBIALA"
+
+firebase:
+  usersCollection: "Usuarios"
+email:
+  host: "smtp.gmail.com"
+  port: 587
+  secure: false
+  user: "serviciosuniversitarios7@gmail.com"
+  pass: "xhom lrbf mwgv seir"
+  from: "Notas Universitarias <serviciosuniversitarios7@gmail.com>"
+  resetBaseUrl: "http://localhost:5173/reset-password"
