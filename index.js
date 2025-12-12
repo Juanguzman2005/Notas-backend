@@ -11,9 +11,11 @@ const { config } = require("./src/database/firebase");
 // Crear app de Express
 const app = express();
 app.use(cors({
-  origin: "*",
-  methods: ["GET", "POST", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization"]
+  origin: [
+    "https://notas-universitarias-byjuanguzman.netlify.app"
+  ],
+  methods: ["GET", "POST"],
+  allowedHeaders: ["Content-Type", "SOAPAction"],
 }));
 
 app.use(bodyParser.json());
